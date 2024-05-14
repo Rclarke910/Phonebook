@@ -35,9 +35,22 @@ public class PhoneBookTest {
         assertEquals("Mikaila", result);
     }
 
+    @Test
+
+    public void testAddAll(){
+        String[] numbers = {"456", "789"};
+
+        phoneBook.addAll("Rashawn", numbers);
+
+        List<String> numbersInBook = phoneBook.lookup("Rashawn");
+
+        assertTrue(numbersInBook.contains("456"));
+        assertTrue(numbersInBook.contains("789"));
+    }
 
 
-
-
-
+    @Test
+    public void testConstructor(){
+        assertFalse(phoneBook.getPhoneRecord().isEmpty());
+    }
 }

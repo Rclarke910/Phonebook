@@ -67,6 +67,16 @@ public class PhoneBook {
         return contacts;
     }
 
+    public List<String> getPhoneRecordByName(String name){
+        return phoneRecord.get(name);
+    }
+
+    public Map getPhoneRecord(){
+        return phoneRecord;
+    }
+
+
+
 
 
     @Override
@@ -75,6 +85,8 @@ public class PhoneBook {
                 "phoneRecord=" + phoneRecord +
                 '}';
     }
+
+
 
 
 }
